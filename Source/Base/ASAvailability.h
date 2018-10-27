@@ -17,6 +17,10 @@
   #define AS_TLS_AVAILABLE 1
 #endif
 
+#ifndef AS_ENABLE_TEXTNODE
+  #define AS_ENABLE_TEXTNODE 1
+#endif
+
 #ifndef AS_USE_PHOTOS
   #define AS_USE_PHOTOS 0
 #endif
