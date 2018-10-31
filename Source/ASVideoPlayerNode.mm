@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#if AS_ENABLE_LAYOUTSPECS
+
 #if TARGET_OS_IOS
 
 #import <AsyncDisplayKit/ASVideoPlayerNode.h>
@@ -1016,3 +1018,5 @@ static void *ASVideoPlayerNodeContext = &ASVideoPlayerNodeContext;
 @end
 
 #endif // TARGET_OS_IOS
+
+#endif
