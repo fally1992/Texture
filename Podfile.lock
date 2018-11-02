@@ -24,13 +24,14 @@ PODS:
     - PINRemoteImage/Core
 
 DEPENDENCIES:
-  - FBSnapshotTestCase/Core (from `https://github.com/facebookarchive/ios-snapshot-test-case/`, tag `2.1.4`)
+  - FBSnapshotTestCase/Core (~> 2.1)
   - JGMethodSwizzler (from `https://github.com/JonasGessner/JGMethodSwizzler`, branch `master`)
   - OCMock (= 3.4.1)
   - PINRemoteImage (= 3.0.0-beta.13)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
     - FLAnimatedImage
     - OCMock
     - PINCache
@@ -38,17 +39,11 @@ SPEC REPOS:
     - PINRemoteImage
 
 EXTERNAL SOURCES:
-  FBSnapshotTestCase:
-    :git: https://github.com/facebookarchive/ios-snapshot-test-case/
-    :tag: 2.1.4
   JGMethodSwizzler:
     :branch: master
     :git: https://github.com/JonasGessner/JGMethodSwizzler
 
 CHECKOUT OPTIONS:
-  FBSnapshotTestCase:
-    :git: https://github.com/facebookarchive/ios-snapshot-test-case/
-    :tag: 2.1.4
   JGMethodSwizzler:
     :commit: 8791eccc5342224bd293b5867348657e3a240c7f
     :git: https://github.com/JonasGessner/JGMethodSwizzler
@@ -62,6 +57,6 @@ SPEC CHECKSUMS:
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
 
-PODFILE CHECKSUM: 1e918c3f80f901e4b1ff11124489d3c6dff895da
+PODFILE CHECKSUM: 42715d61f73cc22cc116bf80d7b268cb1f9e4742
 
 COCOAPODS: 1.5.3
