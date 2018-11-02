@@ -95,8 +95,6 @@ fi
 
 if [ "$MODE" = "examples" -o "$MODE" = "all" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
 
     for example in examples/*/; do
         echo "Building (examples) $example."
@@ -108,8 +106,6 @@ fi
 
 if [ "$MODE" = "examples-pt1" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
 
     for example in $((find ./examples -type d -maxdepth 1 \( ! -iname ".*" \)) | head -6 | head); do
         echo "Building (examples-pt1) $example."
@@ -121,8 +117,6 @@ fi
 
 if [ "$MODE" = "examples-pt2" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
 
     for example in $((find ./examples -type d -maxdepth 1 \( ! -iname ".*" \)) | head -12 | tail -6 | head); do
         echo "Building $example (examples-pt2)."
@@ -134,9 +128,6 @@ fi
 
 if [ "$MODE" = "examples-pt3" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
-
     for example in $((find ./examples -type d -maxdepth 1 \( ! -iname ".*" \)) | head -7 | head); do
         echo "Building $example (examples-pt3)."
 
@@ -147,9 +138,6 @@ fi
 
 if [ "$MODE" = "examples-extra" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
-
     for example in $((find ./examples_extra -type d -maxdepth 1 \( ! -iname ".*" \)) | head -7 | head); do
         echo "Building $example (examples-extra)."
 
@@ -161,9 +149,6 @@ fi
 # Support building a specific example: sh build.sh example examples/ASDKLayoutTransition
 if [ "$MODE" = "example" ]; then
     echo "Verifying that all AsyncDisplayKit examples compile."
-    #Update cocoapods repo
-    pod repo update master
-
     build_example $2
     success="1"
 fi
