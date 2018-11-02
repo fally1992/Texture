@@ -32,7 +32,7 @@ function build_example {
             rm "$example/Podfile.lock"
         fi
         rm -rf "$example/Pods"
-        pod install --project-directory=$example
+        pod install --project-directory=$example --no-repo-update
 
         set -o pipefail && xcodebuild \
             -workspace "${example}/Sample.xcworkspace" \
