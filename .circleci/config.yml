@@ -1,0 +1,31 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
+version: 2
+jobs:
+  build:
+
+    # Limit to Testing branch
+    branches:
+      only:
+        - AHCircleCI
+
+    # Specify the Xcode version to use
+    macos:
+      xcode: "9.4.1"
+
+    steps:
+      - checkout
+
+      # Download CocoaPods specs via HTTPS (faster than Git)
+      # and install CocoaPods.
+      - run:
+          name: Install CocoaPods
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+            pod install
+
+      - run: 
+          name: Build.sh all
+          command: ./build.sh all
