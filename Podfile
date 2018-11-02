@@ -7,6 +7,7 @@ target :'AsyncDisplayKitTests' do
 
   # TODO Move to Uber iOSSnapshotTestCase
   pod 'FBSnapshotTestCase/Core', :git => 'https://github.com/facebookarchive/ios-snapshot-test-case/', :tag => '2.1.4'
+  
   pod 'JGMethodSwizzler', :git => 'https://github.com/JonasGessner/JGMethodSwizzler', :branch => 'master'
 
   # Only for buck build
