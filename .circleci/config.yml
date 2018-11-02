@@ -17,6 +17,13 @@ jobs:
 
     steps:
       - checkout
+
+      # Download cocoapods spec repo from cache
+      - run:
+          name: Fetch cocoapods spec repo from cache
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+
       - run: 
           name: Build.sh all
           command: ./build.sh all
